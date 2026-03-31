@@ -3,7 +3,7 @@ import React from 'react';
 const WorkFlow = () => {
   return (
     <section className="">
-      <div className="max-w-full mx-auto bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  py-16 px-6 text-center text-white shadow-2xl ">
+      <div className="max-w-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  py-16 px-6 text-center text-white shadow-2xl ">
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
           Ready To Transform Your Workflow?
         </h2>
