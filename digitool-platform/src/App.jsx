@@ -6,6 +6,7 @@ import Models from "./component/Models";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Steps from "./component/Steps";
+import Pricing from "./component/Pricing";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -16,6 +17,7 @@ function App() {
       <Banner />
       <Models cart={cart} setCart={setCart} />
       <Steps/>
+      <Pricing/>
       <Footer />
       <ToastContainer />
 

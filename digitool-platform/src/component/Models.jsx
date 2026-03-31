@@ -53,19 +53,25 @@ const Models = ({ cart, setCart }) => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       <h1 className="text-5xl font-extrabold mb-3 text-center">Premium Digital Tools</h1>
-      <div className="flex justify-center mb-10 space-x-2">
-        <button 
+       <p className="text-center text-gray-500 mb-10 ">
+        Choose from our curated collection of premium digital products designed <br />to boost your productivity and creativity.
+      </p>
+
+      <div className="flex justify-center mb-10  ">
+        <div className="border border-gray-100 space-x-2 rounded-full">
+           <button 
           onClick={() => setShowCart(false)}
-          className={`${!showCart ? 'bg-purple-600 text-white' : 'border border-gray-300'} px-6 py-2 rounded-full shadow-md transition`}
+          className={`${!showCart ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white' : 'border border-gray-300'} px-6 py-2 rounded-full shadow-md transition`}
         >
           Products
         </button>
         <button 
           onClick={() => setShowCart(true)}
-          className={`${showCart ? 'bg-purple-600 text-white' : 'border border-gray-300'} px-6 py-2 rounded-full transition`}
+          className={`${showCart ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white' : 'border border-gray-300'} px-6 py-2 rounded-full transition`}
         >
           Cart ({cart.length})
         </button>
+        </div>
       </div>
 
       {!showCart ? (
