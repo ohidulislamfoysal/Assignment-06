@@ -5,6 +5,7 @@ import Footer from "./component/Footer";
 import Models from "./component/Models";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Steps from "./component/Steps";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -14,8 +15,10 @@ function App() {
       <NavBar cartCount={cart.length} />
       <Banner />
       <Models cart={cart} setCart={setCart} />
+      <Steps/>
       <Footer />
       <ToastContainer />
+
     </>
   );
 }
