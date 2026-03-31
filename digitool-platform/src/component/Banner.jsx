@@ -22,7 +22,7 @@ const Banner = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="btn bg-linear-to-r from-[rgb(79,57,246)] to-[#9514FA] rounded-full text-white">Explore Products</button>
+            <button className="btn border-none bg-linear-to-r from-[rgb(79,57,246)] to-[#9514FA] rounded-full text-white">Explore Products</button>
             <button className="btn border border-purple-800 bg-linear-to-r from-[rgb(79,57,246)] to-[#9514FA] rounded-full bg-clip-text text-transparent"><img src="assets/Play.png" />Watch Demo</button>
           </div>
 
