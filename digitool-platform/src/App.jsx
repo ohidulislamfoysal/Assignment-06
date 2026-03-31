@@ -2,20 +2,17 @@ import NavBar from "./component/NavBar";
 import Banner from "./component/Banner";
 import Footer from "./component/Footer";
 import Models from "./component/Models";
-
-const getModels = async () => {
-  const res = await fetch("/models.json");
-};
-
-const modelPromise = getModels();
+ import { ToastContainer, toast } from 'react-toastify';
+ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
       <NavBar />
       <Banner />
-      <Models modelPromise={modelPromise} />
+      <Models />
       <Footer />
+      <ToastContainer />
     </>
   );
 }
