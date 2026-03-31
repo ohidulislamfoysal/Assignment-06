@@ -7,9 +7,8 @@ const tagColors = {
   "Best Seller": "bg-yellow-100 text-yellow-700"
 };
 
-const Models = () => {
+const Models = ({ cart, setCart }) => {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
@@ -54,10 +53,6 @@ const Models = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       <h1 className="text-5xl font-extrabold mb-3 text-center">Premium Digital Tools</h1>
-      <p className="text-center text-gray-500 mb-10">
-        Choose from our curated collection of premium digital products designed <br />to boost your productivity and creativity.
-      </p>
-
       <div className="flex justify-center mb-10 space-x-2">
         <button 
           onClick={() => setShowCart(false)}
@@ -106,22 +101,13 @@ const ProductItem = ({ product, onAdd, isAdded }) => (
     </div>
     <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
     <p className="text-gray-500 text-sm mb-4">{product.description}</p>
-    <ul className="text-sm mb-6 space-y-2">
-      {product.features.map((f, i) => (
-        <li key={i} className="flex items-center">
-          <span className="text-green-500 mr-2">✔</span> {f}
-        </li>
-      ))}
-    </ul>
     <div className="mt-auto flex justify-between items-center pb-4">
       <span className="text-lg font-bold">{product.price}/{product.period}</span> 
     </div>
     <button 
       onClick={() => onAdd(product)}
       className={`px-4 py-2 rounded-full text-white transition-all duration-300 ${
-        isAdded 
-        ? 'bg-green-500 cursor-default' 
-        : 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90'
+        isAdded ? 'bg-green-500 cursor-default' : 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90'
       }`}
     >
       {isAdded ? 'Added to cart' : 'Buy Now'}
@@ -144,10 +130,7 @@ const CartView = ({ cart, onRemove, onCheckout, totalPrice }) => (
                   <p className="text-sm text-gray-500">{item.price}</p>
                 </div>
               </div>
-              <button 
-                onClick={() => onRemove(item.id)}
-                className="text-red-500 hover:text-red-700 font-medium"
-              >
+              <button onClick={() => onRemove(item.id)} className="text-red-500 hover:text-red-700 font-medium">
                 Remove
               </button>
             </div>
@@ -157,10 +140,7 @@ const CartView = ({ cart, onRemove, onCheckout, totalPrice }) => (
           <span className="text-gray-500 font-medium">Total:</span>
           <span className="text-2xl font-bold">${totalPrice}</span>
         </div>
-        <button 
-          onClick={onCheckout}
-          className="w-full bg-[#7C3AED] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#6D28D9] transition"
-        >
+        <button onClick={onCheckout} className="w-full bg-[#7C3AED] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#6D28D9] transition">
           Proceed To Checkout
         </button>
       </>
