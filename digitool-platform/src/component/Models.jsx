@@ -151,7 +151,11 @@ const CartView = ({ cart, onRemove, onCheckout, totalPrice }) => (
         </button>
       </>
     ) : (
-      <p className="text-center text-gray-500 py-10">Your cart is empty!</p>
+      
+      <div className="flex flex-col items-center justify-center">
+        <img className="w-30 h-30" src="/assets/products/shopping-cart.png" alt="empty-cart" />
+        <p className="text-center text-gray-500 py-10">Your cart is empty</p>
+      </div>
     )}
   </div>
 );

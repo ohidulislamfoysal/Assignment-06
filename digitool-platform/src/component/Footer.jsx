@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-[#0B1120] text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
+        {/* justify-items-center এবং text-center যোগ করা হয়েছে ৩ কলামে সেন্টারের জন্য */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 mb-16 justify-items-center text-center lg:text-left">
           
           <div className="md:col-span-1">
             <h2 className="text-3xl font-bold mb-6">DigiTools</h2>
@@ -14,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-start md:items-center">
+          <div className="flex flex-col items-center lg:items-start">
             <div>
               <h3 className="font-bold mb-6 text-lg">Product</h3>
               <ul className="space-y-4 text-gray-400 text-sm">
@@ -26,7 +27,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start md:items-center">
+          <div className="flex flex-col items-center lg:items-start">
             <div>
               <h3 className="font-bold mb-6 text-lg">Company</h3>
               <ul className="space-y-4 text-gray-400 text-sm">
@@ -38,7 +39,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start md:items-center">
+          <div className="flex flex-col items-center lg:items-start">
             <div>
               <h3 className="font-bold mb-6 text-lg">Resources</h3>
               <ul className="space-y-4 text-gray-400 text-sm">
@@ -50,7 +51,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <h3 className="font-bold mb-6 text-lg">Social Links</h3>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all">
